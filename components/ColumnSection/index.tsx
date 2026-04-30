@@ -75,16 +75,16 @@ const ColumnSection = (props: ColumnSectionT) => {
 
   return (
     <section
-      className={`${props.bgColor} text-${props.textColor} py-12 px-4  flex  justify-center items-center`}
+      className={`${props.bgColor} text-${props.textColor} py-12 px-4  flex  justify-center items-center `}
       id={props.name}
     >
       <div className=" flex flex-col flex-wrap justify-center items-center w-full">
         <RenderIf condition={hasTerImage}>
           {/* Layout with terImage: image on left, content on right (desktop) */}
-          <div className="w-full container mx-auto">
+          <div className="w-full mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
               {/* Image on left (desktop) / top (mobile) */}
-              <div className="w-full lg:w-2/5 shrink-0">
+              <div className="w-4/5 md:w-2/5 shrink-0">
                 <ImageComponent
                   src={props.terImage?.url || ""}
                   alt={
